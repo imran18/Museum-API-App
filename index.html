@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Museum Web App</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,700" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/line-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- endinject -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fevicon.png">
+</head>
+
+<body>
+    <section class="intro-wrapper bgimage overlay overlay--dark">
+        <div class="bg_image_holder">
+            <video autoplay muted loop id="myVideo">
+                <source src="img/index/bg-video.mp4" type="video/mp4">
+            </video></div>
+        <div class="mainmenu-wrapper">
+            <div class="menu-area menu1 menu--light">
+                <div class="top-menu-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="menu-fullwidth">
+                                    <div class="logo-wrapper order-lg-0 order-sm-1">
+                                        <div class="logo logo-top">
+                                            <!-- <a href="index.html"><img src="img/logo-white.png" alt="logo image" class="img-fluid"></a> -->
+                                            <a href="index.html">
+                                                <h4 style="color: white;">Museum Web App</h4>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <!-- ends: .logo-wrapper -->
+                                    <div class="menu-container order-lg-1 order-sm-0">
+                                        <div class="d_menu">
+                                            <nav class="navbar navbar-expand-lg mainmenu__menu">
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                                    data-target="#direo-navbar-collapse"
+                                                    aria-controls="direo-navbar-collapse" aria-expanded="false"
+                                                    aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon icon-menu"><i
+                                                            class="la la-reorder"></i></span>
+                                                </button>
+                                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                                <div class="collapse navbar-collapse" id="direo-navbar-collapse">
+                                                    <ul class="navbar-nav">
+                                                        <li>
+                                                            <a href="index.html">Home</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="faqs.html">FAQs</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="contact.html">Contact Us</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.navbar-collapse -->
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="menu-right order-lg-2 order-sm-2">
+                                        <!-- ends: .search-wrapper -->
+                                        <!-- start .author-area -->
+                                        <div class="author-area">
+                                            <div class="author__access_area">
+                                                <ul class="d-flex list-unstyled align-items-center">
+                                                    <li>
+                                                        <a href="#" class="access-link" data-toggle="modal"
+                                                            data-target="#login_modal">Login</a>
+                                                        <span>or</span>
+                                                        <a href="#" class="access-link" data-toggle="modal"
+                                                            data-target="#signup_modal">Register</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ends: .menu-right -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end /.row -->
+                    </div>
+                    <!-- end /.container -->
+                </div>
+                <!-- end  -->
+            </div>
+        </div>
+        <!-- ends: .mainmenu-wrapper -->
+        <div class="directory_content_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="search_title_area">
+                            <h2 class="title">The best items and collections around the globe</h2>
+                            <p class="sub_title">Top nosh and unique itmes just a click away! Explore, Learn and grow..
+                            </p>
+                        </div>
+                        <!-- ends: .search_title_area -->
+                        <form action="/" class="search_form">
+                            <div class="atbd_seach_fields_wrapper">
+                                <div class="single_search_field search_query">
+                                    <input class="form-control search_fields" id="filterText" type="text"
+                                        placeholder=" Textual">
+                                </div>
+                                <div class="single_search_field search_query">
+                                    <input class="form-control search_fields" id="filterTitle" type="text"
+                                        placeholder="Title ">
+                                </div>
+                                <div class="single_search_field search_query">
+                                    <input class="form-control search_fields" id="filterDescription" type="text"
+                                        placeholder=" Description ">
+                                </div>
+                                <div class="atbd_submit_btn">
+                                    <button type="button" onclick="applyFilters()"
+                                        class="btn btn-block btn-gradient btn-gradient-one btn-md btn_search">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- ends: .search_form -->
+                        <div class="directory_home_category_area text-center">
+                            <h3 class="mb-4" style="color: whitesmoke;">Your Geo Location</h3>
+                            <ul class="categories">
+                                <li>
+                                    <a href="#">
+
+                                        <span class="color-warning"><i class="la la-map-marker"></i></span>
+                                        Country:
+                                        <div id="country"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="color-primary"><i class="la la-map-marker"></i></span>
+                                        Longitude:
+                                        <div id="longitude"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="color-success"><i class="la la-map-marker"></i></span>
+                                        Latitude:
+                                        <div id="latitude"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- ends: .directory_home_category_area -->
+                    </div>
+                    <!-- ends: .col-lg-10 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="listing-cards section-bg section-padding">
+        <div class="container">
+            <div class="row" id="object-main-section">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Best Objects Around the World</h2>
+                        <p>Explore the popular items around the world at just 1 click!</p>
+                        <b><p id="resultsCount"></p></b>
+                    </div>
+                </div>
+                <div class="listing-cards-wrapper col-lg-12">
+                    <div class="row" id="object-section">
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta section-padding border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Why <span>Museum </span> Web App?</h2>
+                        <p>Explore the unexplored!</p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6">
+                            <img src="./img/svg/illustration-1.svg" alt="" class="svg">
+                        </div>
+                        <div class="col-lg-5 offset-lg-1 col-md-6 mt-5 mt-md-0">
+                            <ul class="feature-list-wrapper list-unstyled">
+                                <li>
+                                    <div class="icon"><span class="circle-secondary"><i
+                                                class="la la-check-circle"></i></span></div>
+                                    <div class="list-content">
+                                        <h4>Authenticity</h4>
+                                        <p>Our details are completely original, authentic hence reliable</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><span class="circle-success"><i class="la la-money"></i></span>
+                                    </div>
+                                    <div class="list-content">
+                                        <h4>No Costing</h4>
+                                        <p>Explore online Museum totally free of cost!</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><span class="circle-primary"><i
+                                                class="la la-line-chart"></i></span></div>
+                                    <div class="list-content">
+                                        <h4>Enhance your knowledge</h4>
+                                        <p>The BEST Platform for learning and exploring the unexplored!</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- ends: .feature-list-wrapper -->
+                            <ul class="action-btns list-unstyled">
+                                <li><a href="./faqs.html" class="btn btn-success">FAQs</a></li>
+                                <li><a href="./contact.html" class="btn btn-primary">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ends: .cta -->
+    <!-- ends: .places -->
+    <section class="testimonial-wrapper section-padding--bottom mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Trusted By Over 2000+ Users</h2>
+                        <p>Here is what people say about us</p>
+                    </div>
+                </div>
+                <!-- ends: .col-lg-12 -->
+                <div class="testimonial-carousel owl-carousel">
+                    <div class="carousel-single">
+                        <div class="author-thumb">
+                            <img src="img/user.png" style="width: 100px;" alt="" class="rounded-circle"> </div>
+                        <div class="author-info">
+                            <h4>Francis Burton</h4>
+                            <span>Toronto, Canada</span>
+                        </div>
+                        <p class="author-comment">My experience with Museum Web App has been amazing! I always get what
+                            I want within no time and without any hassle. 100% RECOMMENDED</p>
+                    </div>
+                    <!-- ends: .carousel-single -->
+                    <div class="carousel-single">
+                        <div class="author-thumb">
+                            <img src="img/user.png" style="width: 100px;" alt="" class="rounded-circle">
+                        </div>
+                        <div class="author-info">
+                            <h4>Francis Burton</h4>
+                            <span>Toronto, Canada</span>
+                        </div>
+                        <p class="author-comment">My experience with "website name" has been amazing! I always get what
+                            I want within no time and without any hassle. 100% RECOMMENDED</p>
+                    </div>
+                    <!-- ends: .carousel-single -->
+                    <div class="carousel-single">
+                        <div class="author-thumb">
+                            <img src="img/user.png" style="width: 100px;" alt="" class="rounded-circle"> </div>
+                        <div class="author-info">
+                            <h4>Francis Burton</h4>
+                            <span>Toronto, Canada</span>
+                        </div>
+                        <p class="author-comment">My experience with Museum Web App has been amazing! I always get what
+                            I want within no time and without any hassle. 100% RECOMMENDED</p>
+                    </div>
+                    <!-- ends: .carousel-single -->
+                </div>
+                <!-- ends: .testimonial-carousel -->
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h1>Subscribe to Newsletter</h1>
+                    <p>Subscribe to get update and information. Don't worry, we won't send spam!</p>
+                    <form action="/" class="subscribe-form m-top-40">
+                        <div class="form-group">
+                            <span class="la la-envelope-o"></span>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+                        <button class="btn btn-gradient btn-gradient-one">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-three footer-grey p-top-95">
+        <div class="footer-top p-bottom-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="widget widget_pages">
+                            <h2 class="widget-title">Company Info</h2>
+                            <ul class="list-unstyled">
+                                <li class="page-item"><a href="#">About Us</a></li>
+                                <li class="page-item"><a href="#">Conact Us</a></li>
+                                <li class="page-item"><a href="#">Our Items</a></li>
+                                <li class="page-item"><a href="#">Support</a></li>
+                                <li class="page-item"><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ends: .col-lg-3 -->
+                    <div class="col-lg-3 d-flex justify-content-lg-center  col-sm-6">
+                        <div class="widget widget_pages">
+                            <h2 class="widget-title">Helpful Links</h2>
+                            <ul class="list-unstyled">
+                                <li class="page-item"><a href="#">Join Us</a></li>
+                                <li class="page-item"><a href="#">Sign In</a></li>
+                                <li class="page-item"><a href="#">Sign Up</a></li>
+                                <li class="page-item"><a href="#">How it Work</a></li>
+                                <li class="page-item"><a href="#">Advantages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ends: .col-lg-3 -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_social">
+                            <h2 class="widget-title">Connect with Us</h2>
+                            <ul class="list-unstyled social-list">
+                                <li><a href="#"><span class="mail"><i class="la la-envelope"></i></span> Contact
+                                        Support</a></li>
+                                <li><a href="#"><span class="twitter"><i class="fab fa-twitter"></i></span> Twitter</a>
+                                </li>
+                                <li><a href="#"><span class="facebook"><i class="fab fa-facebook-f"></i></span>
+                                        Facebook</a></li>
+                                <li><a href="#"><span class="instagram"><i class="fab fa-instagram"></i></span>
+                                        Instagram</a></li>
+                                <li><a href="#"><span class="gplus"><i class="fab fa-google-plus-g"></i></span>
+                                        Google+</a></li>
+                            </ul>
+                        </div>
+                        <!-- ends: .widget -->
+                    </div>
+                    <!-- ends: .col-lg-3 -->
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="widget widget_text">
+                            <h2 class="widget-title">Catch us on Mobile</h2>
+                            <div class="textwidget">
+                                <p>Download the Museum Web App today so you can find rare products anytime, anywhere.
+                                </p>
+                                <ul class="list-unstyled store-btns">
+                                    <li><a href="#"
+                                            class="btn-gradient btn-gradient-two btn btn-md btn-icon icon-left"><span
+                                                class="fab fa-apple"></span> App Store</a></li>
+                                    <li><a href="#" class="btn btn-dark btn-md btn-icon btn-icon"><span
+                                                class="fab fa-android"></span> Google Play</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- ends: .widget -->
+                    </div>
+                    <!-- ends: .col-lg-3 -->
+                </div>
+            </div>
+        </div>
+        <!-- ends: .footer-top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-bottom--content">
+                            <a href="#" class="footer-logo">
+                                <h3>Museum Web App</h3>
+                            </a>
+                            <p class="m-0 copy-text">Copyrights ©2021 All Rights Reserved</p>
+                            <ul class="list-unstyled lng-list">
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ends: .footer-bottom -->
+    </footer>
+    <!-- ends: .footer -->
+    <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="login_modal_label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login_modal_label"><i class="la la-lock"></i> Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/" id="login-form">
+                        <input type="text" class="form-control" placeholder="Username or Email" required>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                        <div
+                            class="keep_signed custom-control custom-checkbox checkbox-outline checkbox-outline-primary">
+                            <input type="checkbox" class="custom-control-input" name="keep_signed_in" value="1"
+                                id="keep_signed_in">
+                            <label for="keep_signed_in" class="not_empty custom-control-label">Keep me signed in</label>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-lg btn-gradient btn-gradient-two">Sign
+                            In</button>
+                    </form>
+                    <div class="form-excerpts">
+                        <ul class="list-unstyled">
+                            <li>Not a member? <a href="#" onclick="not_a_member()">Sign up</a></li>
+                            <li><a href="#">Recover Password</a></li>
+                        </ul>
+                        <div class="social-login">
+                            <span>Or connect with</span>
+                            <p><a href="#" class="btn btn-outline-secondary"><i class="fab fa-facebook-f"></i>
+                                    Facebook</a><a href="#" class="btn btn-outline-danger"><i
+                                        class="fab fa-google-plus-g"></i> Google</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="signup_modal" tabindex="-1" role="dialog" aria-labelledby="signup_modal_label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signup_modal_label"><i class="la la-lock"></i> Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/" id="signup-form">
+                        <input type="text" class="form-control" placeholder="Username" required>
+                        <input type="email" class="form-control" placeholder="Email" required>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                        <button type="submit" class="btn btn-block btn-lg btn-gradient btn-gradient-two">Sign
+                            Up</button>
+                    </form>
+                    <div class="form-excerpts">
+                        <ul class="list-unstyled">
+                            <li>Already a member? <a href="#" onclick="already_a_member()">Sign In</a></li>
+                            <li><a href="#">Recover Password</a></li>
+                        </ul>
+                        <div class="social-login">
+                            <span>Or Signup with</span>
+                            <p><a href="#" class="btn btn-outline-secondary"><i class="fab fa-facebook-f"></i>
+                                    Facebook</a><a href="#" class="btn btn-outline-danger"><i
+                                        class="fab fa-google-plus-g"></i> Google</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"></script>
+    <!-- inject:js-->
+    <script src="vendor_assets/js/jquery/jquery-1.12.3.js"></script>
+    <script src="vendor_assets/js/bootstrap/popper.js"></script>
+    <script src="vendor_assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="vendor_assets/js/jquery-ui.min.js"></script>
+    <script src="vendor_assets/js/jquery.barrating.min.js"></script>
+    <script src="vendor_assets/js/jquery.counterup.min.js"></script>
+    <script src="vendor_assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="vendor_assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="vendor_assets/js/jquery.waypoints.min.js"></script>
+    <script src="vendor_assets/js/masonry.pkgd.min.js"></script>
+    <script src="vendor_assets/js/owl.carousel.min.js"></script>
+    <script src="vendor_assets/js/select2.full.min.js"></script>
+    <script src="vendor_assets/js/slick.min.js"></script>
+    <script src="theme_assets/js/locator.js"></script>
+    <script src="theme_assets/js/main.js"></script>
+    <script src="theme_assets/js/map.js"></script>
+    <script src="theme_assets/js/index.js"></script>
+    <script src="theme_assets/js/object.js"></script>
+    <!-- endinject-->
+
+    <script>
+        function not_a_member() {
+            $("#login_modal").modal("toggle");
+            setTimeout(function () {
+                $("#signup_modal").modal("toggle");
+            }, 400);
+        }
+
+        function already_a_member() {
+            $("#signup_modal").modal("toggle");
+            setTimeout(function () {
+                $("#login_modal").modal("toggle");
+            }, 400);
+        }
+    </script>
+
+    <script>
+        // load jQuery from a CDN or your server  
+        function geocode(country) {
+
+            $.ajax({
+                url: 'https://api.opencagedata.com/geocode/v1/json',
+                method: 'GET',
+                data: {
+                    'key': '4a2e75123b7d4224b281dbfbc72ba3c5',
+                    'q': country,
+                    'no_annotations': 1
+                    // see other optional params:
+                    // https://opencagedata.com/api#forward-opt
+                },
+                dataType: 'json',
+                statusCode: {
+                    200: function (response) { // success
+                        $("#longitude").text(response.results[0].geometry.lng);
+                        $("#latitude").text(response.results[0].geometry.lat);
+                        $("#country").text(country);
+                        localStorage.setItem("country", country);
+                        localStorage.setItem("latitude", response.results[0].geometry.lat);
+                        localStorage.setItem("longitude", response.results[0].geometry.lng);
+                        console.log(response.results[0]);
+                    },
+                    402: function () {
+                        alert(
+                            'hit free trial daily limit exceeded, become a customer: https://opencagedata.com/pricing'
+                            );
+                    }
+                    // other possible response codes:
+                    // https://opencagedata.com/api#codes
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            if (localStorage.getItem("country") != null || localStorage.getItem("country") != undefined) {
+                $("#longitude").text(localStorage.getItem("longitude"));
+                $("#latitude").text(localStorage.getItem("latitude"));
+                $("#country").text(localStorage.getItem("country"));
+            } else {
+                let country = null;
+                $.get("http://ip-api.com/json", function (response) {
+                    console.log(response.country); // "United States"
+                    country = response.country;
+                    console.log(response.countryCode); // "US"
+                }, "jsonp");
+
+                setTimeout(function () {
+                    geocode(country);
+                }, 2000)
+            }
+
+        });
+    </script>
+</body>
+
+</html>
